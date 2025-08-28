@@ -1,17 +1,21 @@
 "use client";
-import { ArrowLeft, Eye, Github, Twitter } from "lucide-react";
+import { ArrowLeft, Eye, Github } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
-type Props = {
-	project: {
-		url?: string;
-		title: string;
-		description: string;
-		repository?: string;
-	};
+type ProjectLink = {
+  label: string;
+  href: string;
+};
 
-	views: number;
+type Props = {
+  project: {
+    url?: string;
+    title: string;
+    description: string;
+    repository?: string;
+  };
+  views: number;
 };
 export const Header: React.FC<Props> = ({ project, views }) => {
 	const ref = useRef<HTMLElement>(null);
@@ -67,24 +71,30 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 								views,
 							)}
 						</span>
-						<Link target="_blank" href="https://twitter.com/chronark_">
-							<Twitter
-								className={`w-6 h-6 duration-200 hover:font-medium ${
-									isIntersecting
-										? " text-zinc-400 hover:text-zinc-100"
-										: "text-zinc-600 hover:text-zinc-900"
-								} `}
-							/>
-						</Link>
-						<Link target="_blank" href="https://github.com/chronark">
-							<Github
-								className={`w-6 h-6 duration-200 hover:font-medium ${
-									isIntersecting
-										? " text-zinc-400 hover:text-zinc-100"
-										: "text-zinc-600 hover:text-zinc-900"
-								} `}
-							/>
-						</Link>
+						{links.map((link) => (
+							<Link
+								target="_blank"
+								href={link.href}
+								key={link.label}
+								className="text-sm duration-200 text-zinc-400 hover:text-zinc-100 flex items-center gap-1"
+							>
+								{link.label}
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									strokeWidth="2"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									className="ml-1"
+								>
+									<path d="M7 7h10v10"></path>
+									<path d="M7 17 17 7"></path>
+								</svg>
+							</Link>
+						))}
 					</div>
 
 					<Link
@@ -95,7 +105,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 								: "text-zinc-600 hover:text-zinc-900"
 						} `}
 					>
-						<ArrowLeft className="w-6 h-6 " />
+						<ArrowLeft className="w-6 h-6" />
 					</Link>
 				</div>
 			</div>

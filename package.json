@@ -1,7 +1,9 @@
 {
-  "name": "chronark.com",
+  "name": "sai-teja-portfolio",
   "version": "0.1.0",
   "private": true,
+  "author": "Sai Teja V",
+  "description": "Personal portfolio of Sai Teja - Computer Science Student & Developer",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

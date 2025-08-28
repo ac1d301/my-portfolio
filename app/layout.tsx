@@ -6,19 +6,18 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "chronark.com",
-    template: "%s | chronark.com",
+    default: "Sai Teja | Portfolio",
+    template: "%s | Sai Teja",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "Computer Science student passionate about building impactful technology solutions, AI applications, and web development.",
   openGraph: {
-    title: "chronark.com",
-    description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+    title: "Sai Teja | Portfolio",
+    description: "Computer Science student passionate about building impactful technology solutions, AI applications, and web development.",
+    url: "https://yourdomain.com",
+    siteName: "Sai Teja",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "/og.png",
         width: 1920,
         height: 1080,
       },
@@ -38,8 +37,9 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Chronark",
+    title: "Sai Teja",
     card: "summary_large_image",
+    description: "Computer Science student | AI & Web Development Enthusiast | F1 Fan",
   },
   icons: {
     shortcut: "/favicon.png",
