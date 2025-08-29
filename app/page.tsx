@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       <nav className="my-16 animate-fade-in">
-        <ul className="flex items-center justify-center gap-6">
+        <ul className="flex items-center justify-center gap-24">
           {navigation.map((item) => (
             <li key={item.href}>
               <Link
@@ -38,7 +38,7 @@ export default function Home() {
 
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <div className="my-16 text-center animate-fade-in max-w-2xl px-4">
-        <h2 className="text-sm text-zinc-400 leading-relaxed">
+        <h2 className="text-sm text-zinc-400 leading-relaxed text-justify">
           Computer Science student at VIT with experience in web development, AI automation, and full-stack applications. Skilled in technologies from React frontends to LangChain pipelines, I am driven by building solutions that deliver real impact. Outside of tech, I am passionate about Formula 1 and automotive engineering and enjoy connecting with like-minded professionals.
         </h2>
       </div>
